@@ -1,33 +1,62 @@
 .user-card {
-  border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 16px;
-    width: 220px;
-    text-align: center;
-    margin: 10px;
-    background-color: #f9f9f9;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  border: none;
+  border-radius: 16px;
+  padding: 24px 16px;
+  width: 260px;
+  text-align: center;
+  margin: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px rgba(3, 5, 94, 0.10);
+  transition: transform 0.18s, box-shadow 0.18s;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(3, 5, 94, 0.18);
 }
 
 .user-card img {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
-}   
+  border: 3px solid #ff9800;
+  margin-bottom: 12px;
+}
 
 .user-card h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin: 10px 0 5px;
+  color: #03055e;
+  font-weight: 600;
 }
 
 .user-card p,
-.user-card small{ 
-    font-size: 14px;
-    color: #333;
-    margin: 4px 0;
-    word-break: break-word;
-    white-space: normal;
+.user-card small { 
+  font-size: 15px;
+  color: #333;
+  margin: 4px 0;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.user-card .button {
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s;
+}
+
+.user-card .button:hover {
+  background: #e65100;
 }
