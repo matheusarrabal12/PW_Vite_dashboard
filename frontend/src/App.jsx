@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import UserCard from './components/UserCard';
+import UserDetail from './pages/UserDetail';
 import './App.css';
 
 function App() { 
@@ -13,15 +15,24 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <h1>Dashboard de Usuários</h1>
-      <p>Total de usuarios: {users.length}</p>
-      <div className="user-container">
-        {users.map((user) => (
-          <UserCard key={user.id} user={user} />
-        ))}
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <h1>Dashboard de Usuários</h1>
+              <p>Total de usuarios: {users.length}</p>
+              <div className="user-container">
+                {users.map(user => (
+                  <UserCard key={user.id} user={user} />
+                ))}
+              </div>
+            </>
+          } />
+          <Route path="/usuarios/:id" element={<UserDetail users={users} />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 

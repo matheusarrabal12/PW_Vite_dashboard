@@ -1,0 +1,50 @@
+/* Centraliza o container na tela usando Flexbox */
+.detail-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #03055e 60%, #ff9800 100%);
+}
+
+/* Card de detalhes do usuário */
+.user-detail {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(3, 5, 94, 0.10);
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Imagem responsiva e arredondada */
+.user-detail img {
+  border: 3px solid #ff9800;
+  margin-bottom: 16px;
+}
+
+.user-detail h2 {
+  color: #03055e;
+  margin-bottom: 12px;
+}
+
+.user-detail p {
+  color: #333;
+  margin: 8px 0;
+}
+
+/* Responsividade extra para telas pequenas */
+@media (max-width: 500px) {
+  .user-detail {
+    padding: 20px 8px;
+  }
+  .user-detail img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
