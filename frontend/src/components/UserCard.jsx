@@ -13,7 +13,7 @@ function UserCard({ user }) {
       <img src={user.avatar} alt={user.name} />
       <h3>{user.name}</h3>
       <p>{user.email}</p>
-      <small>{user.role}</small>
+      <small><strong>{user.firstName}</strong></small>
       <button className="button" onClick={handleViewProfile}>Ver Perfil</button>
     </div>
   );
